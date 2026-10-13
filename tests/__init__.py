@@ -1,0 +1,1 @@
+"""Test package for game-sdk-patch-updater."""
