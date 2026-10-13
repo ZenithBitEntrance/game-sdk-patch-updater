@@ -1,0 +1,1 @@
+"""Thin CLI handlers. One verb per module, no business logic."""
