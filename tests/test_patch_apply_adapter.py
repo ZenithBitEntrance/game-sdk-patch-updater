@@ -1,0 +1,1 @@
+"""Apply adapter tests: path-traversal guard + happy path extract."""
