@@ -1,0 +1,1 @@
+"""Platform adapters. Every OS-specific call lives behind one of these."""
