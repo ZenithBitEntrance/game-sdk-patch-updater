@@ -1,0 +1,21 @@
+[install]
+# Default SDK install root. Overridden by --root on the CLI.
+root = "C:/GameSDK/runtime"
+# Directory for downloaded blobs before they are applied.
+cache_dir = "C:/GameSDK/patch_cache"
+# Keep N applied patches for rollback.
+rollback_depth = 3
+
+[network]
+timeout_seconds = 30
+retries = 4
+retry_backoff_seconds = 2.0
+user_agent = "game-sdk-patch-updater/0.6.3"
+
+[apply]
+# Refuse to apply a patch that would remove more than this many files.
+max_deletions = 500
+# Refuse patch blobs larger than this, in bytes.
+max_blob_bytes = 536870912
+# Fail closed if a patch blob carries no SHA-256.
+require_sha256 = true
