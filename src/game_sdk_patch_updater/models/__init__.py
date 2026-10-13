@@ -1,0 +1,1 @@
+"""Pydantic data models for manifests, patches, and install state."""
