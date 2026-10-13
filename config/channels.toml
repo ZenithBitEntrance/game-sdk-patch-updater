@@ -1,0 +1,28 @@
+# Release channels for the Game SDK runtime.
+# Each channel points at a manifest endpoint and declares its trust level.
+
+[channels.stable]
+description = "Stable Game SDK releases. Default channel."
+manifest_url = "https://sdk-releases.internal.example.com/stable/manifest.json"
+signed = true
+public_key = "keys/stable_ed25519.pub"
+allow_downgrade = false
+
+[channels.beta]
+description = "Beta Game SDK builds, shipped ahead of stable."
+manifest_url = "https://sdk-releases.internal.example.com/beta/manifest.json"
+signed = true
+public_key = "keys/beta_ed25519.pub"
+allow_downgrade = false
+
+[channels.modding]
+description = "Community modding channel for SDK forks and patched runtimes."
+manifest_url = "https://mods.example.com/game-sdk/manifest.json"
+signed = false
+allow_downgrade = true
+
+[channels.local]
+description = "Local file channel, used by tests and offline installs."
+manifest_url = "file://./patch_cache/local/manifest.json"
+signed = false
+allow_downgrade = true
